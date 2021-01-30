@@ -1,21 +1,545 @@
+
 <!DOCTYPE html>
-<html>
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width">
-      <title>Ayush Srivastava</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-   </head>
-   <body>
-      <!-- The core Firebase JS SDK is always required and must be listed first -->
-      <script src="/__/firebase/8.2.5/firebase-app.js"></script>
+<html lang="en">
 
-      <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
-      <script src="/__/firebase/8.2.5/firebase-analytics.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Ayush Srivastava</title>
+    
+    <link rel="stylesheet" href="https://ysfdev.000webhostapp.com/JohnDeo/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://ysfdev.000webhostapp.com/JohnDeo/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://ysfdev.000webhostapp.com/JohnDeo/assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aldrich">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Almendra">
+    <link rel="stylesheet" href="https://ysfdev.000webhostapp.com/JohnDeo/assets/css/Fixed-navbar-starting-with-transparency.min.css">
+    <link rel="stylesheet" href="https://ysfdev.000webhostapp.com/JohnDeo/assets/css/Filterable-Gallery.min.css">
+    <link rel="stylesheet" href="https://ysfdev.000webhostapp.com/JohnDeo/assets/css/Animated-Type-Heading.min.css">
+    <link rel="stylesheet" href="https://ysfdev.000webhostapp.com/JohnDeo/assets/css/custom.min.css">
+    <link rel="stylesheet" href="https://ysfdev.000webhostapp.com/JohnDeo/assets/css/Footer-with-social-media-icons.min.css">
+    <link rel="stylesheet" href="https://ysfdev.000webhostapp.com/JohnDeo/assets/css/News-Cards.min.css">
+    <link rel="stylesheet" href="https://ysfdev.000webhostapp.com/JohnDeo/assets/css/Testimonial-Slider-1-2.min.css">
+    <link rel="stylesheet" href="https://ysfdev.000webhostapp.com/JohnDeo/assets/css/Testimonial-Slider-1.min.css">
+    <link rel="stylesheet" href="https://ysfdev.000webhostapp.com/JohnDeo/assets/css/useredits.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-      <!-- Initialize Firebase -->
-      <script src="/__/firebase/init.js"></script>
-   </body>
+    <style>
+
+    .wow{
+        visibility: visible !important;
+    }
+    #loading {
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      position: fixed;
+      display: block;
+      background-color: #000;
+      z-index: 99;
+      text-align: center;
+    }
+    
+    #loading-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 100;
+    }
+    img[alt="www.000webhost.com"]{
+    display : none !important;
+    }
+    </style>
+
+</head>
+
+<body data-spy="scroll" data-target="#mainnav" style="background-image: url('https://ysfdev.000webhostapp.com/JohnDeo/assets/img/homebackground.jpg');background-attachment: fixed;background-position: center;background-size: cover;">
+
+
+    <div class="container-fluid main" style="padding: 0px;">
+        <div id="loading">
+            <img id="loading-image" src="https://ysfdev.000webhostapp.com/JohnDeo/assets/gif/loading.gif" alt="">
+        </div>
+
+        <div class="container">
+            <nav id="mainnav" class="navbar navbar-dark navbar-expand-lg fixed-top clean-navbar navbackground">
+
+                <a class="navbar-brand logo" href="#">Ayush Srivastava</a>
+
+                <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                    <span class="sr-only">Toggle navigation</span><i id="menuico" class="fa fa-caret-down"></i></button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item item" role="presentation"><a id="h" class="nav-link active"
+                                href="#home">HOME</a></li>
+                        <li class="nav-item item" role="presentation"><a id="a" class="nav-link" href="#about">ABOUT</a>
+                        </li>
+                        <li class="nav-item item" role="presentation"><a id="n" class="nav-link" href="#news">NEWS</a>
+                        </li>
+                        <li class="nav-item item" role="presentation"><a id="p" class="nav-link"
+                                href="#portfolio">PORTFOLIO</a></li>
+                        <li class="nav-item item" role="presentation"><a id="c" class="nav-link"
+                                href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <section id="home" class="clean-block clean-hero homebackground" style="background-image: url('./portfolio/src/images/ayush.jpg');height:100vh;">
+            <div class="text">
+
+                <h2 style="font-family: Almendra, serif;">Hello There I am&nbsp;Ayush Srivastava<br></h2>
+
+                <div class="caption v-middle text-center">
+                    <h1 class="cd-headline clip">
+                        <span class="blc">I'm | </span>
+                        <span class="cd-words-wrapper">
+                            <b class="is-visible">Designer.</b>
+                            <b>Coder.</b>
+                            <b>Creative.</b>
+                            <b>Gamer.</b>
+                        </span>
+                    </h1>
+                </div>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in,
+                    mattis vitae leo.</p>
+
+
+                <a class="btn btn-outline-light btn-lg learnmorebtn" href="#about">Learn More</a>
+            </div>
+            <div class="mousecroll-wrapper">
+                <i id="mouseico" class="fa fa-caret-down animated infinite bounce"></i>
+            </div>
+            <span id="about" class="hiderA">HidderA</span>
+        </section>
+
+
+        <section class="clean-block clean-info dark aboutbg">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="block-heading">
+                            <h2 class="text-info abouth">About Me</h2>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+
+                        </div>
+
+                        <div class="row align-items-center">
+
+                            <div class="col-md-6">
+                                <img class="img-thumbnail wow rotateInDownLeft" src="https://ysfdev.000webhostapp.com/JohnDeo/assets/img/aboutme.jpg" alt="Thats Me">
+                            </div>
+
+                            <div class="col-md-6">
+                                <h3 class="abouttitle animated bounce infinite">So Who Am I ?</h3>
+                                <div class="getting-started-info">
+
+                                    <p>I am John Doe also known as lipsom. I am a Ghaphic Designer and a Modeler .
+                                        During my spare time I like to hang out with my friends and also explore more
+                                        about
+                                        myself.</p>
+
+
+                                </div>
+
+                                <a class="btn btn-lg btn-about aboutlink" href="#contact">Say Hello</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span id="news" class="hiderB">HidderB</span>
+        </section>
+
+
+        <div class="container-fluid newscontainer">
+            <div class="row">
+                <div class="col">
+                    <div class="block-heading">
+
+
+                        <h2 class="text-center newsheading">Latest And Upcoming News</h2>
+
+
+                        <p class="text-center" style="color: #fff;margin-bottom: 3rem;">Current and Upcoming News And Events
+                            Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 newscolfr text-center">
+                    <figure class="snip1527 wow bounceInLeft slow">
+                        <div class="image"><img src="https://source.unsplash.com/dS-q7-zkD9c/600x600"
+                                alt="pr-sample23" /></div>
+                        <figcaption>
+                            <div class="date">
+
+                                <span class="day">28</span>
+
+                                <span class="month">Oct</span>
+
+                            </div>
+                            <h3>Photographer Meetup</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab deserunt, id laboriosam
+                                maiores mollitia quia!
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <a href="#"></a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 newscolfr">
+                    <figure class="snip1527 wow slideInUp slow">
+                        <div class="image"><img src="https://source.unsplash.com/P2BoE6tb8ig/700x700"
+                                alt="pr-sample24" /></div>
+                        <figcaption>
+                            <div class="date"><span class="day">12</span><span class="month">Jun</span></div>
+                            <h3>Started A New Course Today</h3>
+                            <p>
+
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab deserunt, id laboriosam
+                                maiores mollitia quia!
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <a href="#"></a>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 newscolfr">
+                    <figure class="snip1527 wow bounceInRight slow">
+                        <div class="image"><img src="https://source.unsplash.com/z8Tul255kGg/600x600"
+                                alt="pr-sample25" /></div>
+                        <figcaption>
+                            <div class="date"><span class="day">01</span><span class="month">Dec</span></div>
+                            <h3>Dance Party</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab deserunt, id laboriosam
+                                maiores mollitia quia!
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <a href="#"></a>
+                </div>
+            </div>
+
+            <span id="portfolio" class="hiderB">HidderB</span>
+        </div>
+
+
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col" style="padding: 0px;">
+                    <div id="carouselExampleControls" class="carousel slide uniqslider" data-ride="carousel"
+                        data-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <section style="background-color: #F6F6F6;">
+                                    <div class="container-fluid portfoliocontainer">
+                                        <h1 class="text-center wow lightSpeedIn slow"><a class="gotolink gotoskill"
+                                                href="#carouselExampleControls" data-slide="next"
+                                                title="View My Skills">Portfolio &emsp; <i
+                                                    class="fa fa-angle-double-right animated infinite shake slower"></i></a>
+                                        </h1>
+                                        <p class="text-center">Lorem ipsum This is my portfolio</p>
+                                        <div class="filtr-controls"><span class="pinkop active" data-filter="all">All
+                                            </span><span class="pinkop" data-filter="1">Model </span><span class="pinkop"
+                                                data-filter="2">photography </span><span class="pinkop" data-filter="3">OTHERS </span>
+                                        </div>
+                                        <div class="row filtr-container">
+                                            <div class="col-sm-6 col-md-4 col-lg-3 filtr-item" data-category="1, 3">
+                                                <a href="https://source.unsplash.com/t3zrEm88ehc/1200x900.jpg">
+                                                    <img class="img-fluid" src="https://source.unsplash.com/t3zrEm88ehc/1200x900.jpg" alt="Gallery" />
+                                                </a>
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 filtr-item" data-category="2"><a
+                                                    href="https://source.unsplash.com/xfngap_DToE/1200x1200.jpg"><img
+                                                        class="img-fluid"
+                                                        src="https://source.unsplash.com/xfngap_DToE/600x600.jpg"
+                                                        alt="Gallery" /></a>
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 filtr-item" data-category="3"><a
+                                                    href="https://source.unsplash.com/Hcfwew744z4/1200x900.jpg"><img
+                                                        class="img-fluid"
+                                                        src="https://source.unsplash.com/Hcfwew744z4/1200x900.jpg"
+                                                        alt="Gallery" /></a>
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 filtr-item" data-category="2"><a
+                                                    href="https://source.unsplash.com/HWwF4OnXAdM/1200x900.jpg"><img
+                                                        class="img-fluid"
+                                                        src="https://source.unsplash.com/HWwF4OnXAdM/600x600.jpg"
+                                                        alt="Gallery" /></a>
+                                            </div>
+
+                                            <div class="col-sm-6 col-md-4 col-lg-3 filtr-item" data-category="2"><a
+                                                    href="https://source.unsplash.com/_TuI8tZHlk4/1200x1200.jpg"><img
+                                                        class="img-fluid"
+                                                        src="https://source.unsplash.com/_TuI8tZHlk4/600x600.jpg"
+                                                        alt="Gallery" /></a>
+                                            </div>
+
+                                            <div class="col-sm-6 col-md-4 col-lg-3 filtr-item" data-category="3"><a
+                                                    href="https://source.unsplash.com/LaHo9Set3bI/1200x900.jpg"><img
+                                                        class="img-fluid"
+                                                        src="https://source.unsplash.com/LaHo9Set3bI/1200x900.jpg"
+                                                        alt="Gallery" /></a>
+                                            </div>
+
+                                            <div class="col-sm-6 col-md-4 col-lg-3 filtr-item" data-category="2"><a
+                                                    href="https://source.unsplash.com/bK8Wlaq7NaA/1200x1200.jpg"><img
+                                                        class="img-fluid"
+                                                        src="https://source.unsplash.com/bK8Wlaq7NaA/600x600.jpg"
+                                                        alt="Gallery" /></a>
+                                            </div>
+
+                                            <div class="col-sm-6 col-md-4 col-lg-3 filtr-item" data-category="1"><a
+                                                    href="https://source.unsplash.com/oNQ48mnAVcA/1200x900.jpg"><img
+                                                        class="img-fluid"
+                                                        src="https://source.unsplash.com/oNQ48mnAVcA/1200x900.jpg"
+                                                        alt="Gallery" /></a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="carousel-item">
+                                <section style="background-color: #F6F6F6;">
+                                    <div class="container-fluid portfoliocontainer">
+                                        <h1 class="text-center wow lightSpeedIn slow"><a class="gotolink gotoport"
+                                                href="#carouselExampleControls" data-slide="prev"
+                                                title="Go To Portfolio"><i
+                                                    class="fa fa-angle-double-left animated infinite shake slower"></i>
+                                                &emsp; My Skills</a></h1>
+                                        <p class="text-center skilldec">Lorem ipsum These Are Some of My Skills</p>
+                                        <div class="row">
+                                            <div class="col-md-2 col-lg-2 d-none d-md-block"></div>
+                                            <div class="col-md-8 col-lg-8" style="padding-bottom: 4rem;">
+                                                <h3 class="skillheading">Graphic Designing</h3>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped bg-info progress-bar-animated"
+                                                        role="progressbar" style="width: 85%;" aria-valuenow="85"
+                                                        aria-valuemin="0" aria-valuemax="100">85%</div>
+                                                </div>
+                                                <br>
+                                                <h3 class="skillheading">Photography</h3>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped bg-info progress-bar-animated"
+                                                        role="progressbar" style="width: 65%;" aria-valuenow="65"
+                                                        aria-valuemin="0" aria-valuemax="100">65%</div>
+                                                </div>
+                                                <br>
+                                                <h3 class="skillheading">Social Skills</h3>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped bg-info progress-bar-animated"
+                                                        role="progressbar" style="width: 90%;" aria-valuenow="90"
+                                                        aria-valuemin="0" aria-valuemax="100">90%</div>
+                                                </div>
+                                                <br>
+                                                <h3 class="skillheading">Modeling</h3>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped bg-info progress-bar-animated"
+                                                        role="progressbar" style="width: 60%;" aria-valuenow="90"
+                                                        aria-valuemin="0" aria-valuemax="100">60%</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-lg-2 d-none d-md-block"></div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Reveiw Slider -->
+        <div class="container-fluid reviewcontainer">
+            <div class="row">
+                <div class="col">
+                    <div id="testimonial_095" class="carousel slide testimonial_095_indicators testimonial_095_control_button thumb_scroll_x swipe_x ps_easeOutSine reviewsection" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+
+                        <!-- Header of Slider -->
+                        <div class="testimonial_095_header">
+                            <h5>Reveiws</h5>
+                            <p style="color: #fff;">What People Saying About My Work</p>
+                        </div>
+                        <!-- /Header of Slider -->
+
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#testimonial_095" data-slide-to="0" class="active"></li>
+                            <li data-target="#testimonial_095" data-slide-to="1"></li>
+                            <li data-target="#testimonial_095" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper For Slides -->
+                        <div class="carousel-inner" role="listbox">
+
+                            <!-- First Slide -->
+                            <div class="carousel-item active">
+                                <!-- Text Layer -->
+                                <div class="testimonial_095_slide">
+                                    <a href="#"><img class="profilepic"
+                                            src="https://randomuser.me/api/portraits/men/35.jpg" alt="profilepic" /></a>
+                                    <p>Lorem ipsum dolor sit amet adipiscing elit am nibh unc varius facilisis eros ed
+                                        erat in in
+                                        velit quis arcu ornare laoreet urabitur.</p>
+                                    <h5><a href="#">Eddy</a></h5>
+                                </div> <!-- /Text Layer -->
+                            </div> <!-- /item -->
+                            <!-- End of First Slide -->
+
+                            <!-- Second Slide -->
+                            <div class="carousel-item">
+                                <!-- Text Layer -->
+                                <div class="testimonial_095_slide">
+                                    <a href="#"><img class="profilepic"
+                                            src="https://randomuser.me/api/portraits/women/44.jpg"
+                                            alt="testmonialprofilepic" /></a>
+                                    <p>Lorem ipsum dolor sit amet adipiscing elit am nibh unc varius facilisis eros ed
+                                        erat in in
+                                        velit quis arcu ornare laoreet urabitur.</p>
+                                    <h5><a href="#">Lisa</a></h5>
+                                </div> <!-- /Text Layer -->
+                            </div> <!-- /item -->
+                            <!-- End of Second Slide -->
+
+                            <!-- Third Slide -->
+                            <div class="carousel-item">
+                                <!-- Text Layer -->
+                                <div class="testimonial_095_slide">
+                                    <a href="#"><img class="profilepic"
+                                            src="https://randomuser.me/api/portraits/women/26.jpg"
+                                            alt="testmonialprofilepic" /></a>
+                                    <p>Lorem ipsum dolor sit amet adipiscing elit am nibh unc varius facilisis eros ed
+                                        erat in in
+                                        velit quis arcu ornare laoreet urabitur.</p>
+                                    <h5><a href="#">Sofia</a></h5>
+                                </div> <!-- /Text Layer -->
+                            </div> <!-- /item -->
+                            <!-- End of Third Slide -->
+
+                        </div> <!-- End of Wrapper For Slides -->
+
+                        <!-- Left Control -->
+                        <a class="carousel-control-prev" href="#testimonial_095" data-slide="prev">
+                            <span class="fa fa-chevron-left"></span>
+                        </a>
+
+                        <!-- Right Control -->
+                        <a class="carousel-control-next" href="#testimonial_095" data-slide="next">
+                            <span class="fa fa-chevron-right"></span>
+                        </a>
+
+                        <span id="contact" class="hiderB">HidderB</span>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- Reveiw Slider End -->
+
+
+        <!-- Contact Form Section -->
+        <section class="clean-block clean-form dark-contactfrom">
+            <div class="container-fluid" style="padding-top: 10px;">
+                <div class="block-heading">
+                    <h2 class="text-info">Contact Me</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in,
+                        mattis vitae leo.</p>
+                </div>
+                <form class="wow bounceInUp" action="contact.php" method="post">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input name="Name" class="form-control" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input name="Subject" class="form-control" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input name="Email" class="form-control" type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="Message" class="form-control" required></textarea></div>
+                    <div class="form-group"><button class="btn btn-success btn-block" type="submit">Send</button></div>
+                </form>
+            </div>
+        </section>
+        <!-- Contact Form Section -->
+
+
+        <!-- Footer Section -->
+        <footer id="footerpad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-8 mx-auto">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item"><a href="#"><span class="fa-stack fa-lg"><i
+                                            class="fa fa-circle fa-stack-2x"></i><i
+                                            class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a></li>
+                            <li class="list-inline-item"><a href="#"><span class="fa-stack fa-lg"><i
+                                            class="fa fa-circle fa-stack-2x"></i><i
+                                            class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a></li>
+                            <li class="list-inline-item"><a href="#"><span class="fa-stack fa-lg"><i
+                                            class="fa fa-circle fa-stack-2x"></i><i
+                                            class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a></li>
+                            <li class="list-inline-item"><a href="#"><span class="fa-stack fa-lg"><i
+                                            class="fa fa-circle fa-stack-2x"></i><i
+                                            class="fa fa-pinterest fa-stack-1x fa-inverse"></i></span></a></li>
+                        </ul>
+                        <p class="copyright text-muted text-center">Copyright &copy; Your Company 2020 | Web Design by ysfDev</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section End -->
+
+    </div>
+
+
+    <script src="https://ysfdev.000webhostapp.com/JohnDeo/assets/js/jquery.min.js"></script>
+    <script src="https://ysfdev.000webhostapp.com/JohnDeo/assets/js/custom.js"></script>
+    <script src="https://ysfdev.000webhostapp.com/JohnDeo/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="https://ysfdev.000webhostapp.com/JohnDeo/assets/js/Filterable-Gallery.js"></script>
+    <script src="https://ysfdev.000webhostapp.com/JohnDeo/assets/js/theme.js"></script>
+    <script src="https://ysfdev.000webhostapp.com/JohnDeo/assets/js/Animated-Type-Heading.js"></script>
+    <script src="https://ysfdev.000webhostapp.com/JohnDeo/assets/js/Fixed-navbar-starting-with-transparency.js"></script>
+    <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+    <script src="https://ysfdev.000webhostapp.com/JohnDeo/assets/js/Testimonial-Slider-1.js"></script>
+    <script src="https://ysfdev.000webhostapp.com/JohnDeo/assets/js/jquery.ripples-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+
+    <script>
+    new WOW().init();
+    </script>
+
+
+
+<div style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: auto;right: 1%;cursor: pointer;line-height: 0;display:block !important;"><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website&utm_content=footer_img"><img src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png" alt="www.000webhost.com"></a></div><script>function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o<n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(e))return i.substring(e.length,i.length)}return""}getCookie("hostinger")&&(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",location.reload());var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],notification=document.getElementsByClassName("notice notice-success is-dismissible"),hostingerLogo=document.getElementsByClassName("hlogo"),mainContent=document.getElementsByClassName("notice_content")[0];if(null!=wordpressAdminBody&&notification.length>0&&null!=mainContent){var googleFont=document.createElement("link");googleFontHref=document.createAttribute("href"),googleFontRel=document.createAttribute("rel"),googleFontHref.value="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700",googleFontRel.value="stylesheet",googleFont.setAttributeNode(googleFontHref),googleFont.setAttributeNode(googleFontRel);var css="@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 0.3;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; display: flex; justify-content: center; width: 100%; }} .web-hosting-90-off-image {max-width: 90%;} .content-wrapper {min-height: 454px; display: flex; flex-direction: column; justify-content: center; z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); max-width: 350px; border: 0; border-radius: 3px; background-color: #ff4546 !important; padding: 15px 55px !important; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",style=document.createElement("style"),sheet=window.document.styleSheets[0];style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),document.getElementsByTagName("head")[0].appendChild(style),document.getElementsByTagName("head")[0].appendChild(googleFont);var button=document.getElementsByClassName("upgrade_button_red")[0],link=button.parentElement;link.setAttribute("href","https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&utm_medium=panel&utm_campaign=000-wp"),link.innerHTML='<button class="upgrade_button_red_sale">Go for it</button>',(notification=notification[0]).setAttribute("style","padding-bottom: 0; padding-top: 5px; background-color: #040713; background-size: cover; background-repeat: no-repeat; color: #ffffff; border-left-color: #040713;"),notification.className="notice notice-error is-dismissible";var mainContentHolder=document.getElementById("main_content");mainContentHolder.setAttribute("style","padding: 0;"),hostingerLogo[0].remove();var h1Tag=notification.getElementsByTagName("H1")[0];h1Tag.className="000-h1",h1Tag.innerHTML="Black Friday Prices",h1Tag.setAttribute("style",'color: white; font-family: "Roboto", sans-serif; font-size: 22px; font-weight: 700; text-transform: uppercase;');var h2Tag=document.createElement("H2");h2Tag.innerHTML="Get 90% Off!",h2Tag.setAttribute("style",'color: white; margin: 10px 0 15px 0; font-family: "Roboto", sans-serif; font-size: 60px; font-weight: 700; line-height: 1;'),h1Tag.parentNode.insertBefore(h2Tag,h1Tag.nextSibling);var paragraph=notification.getElementsByTagName("p")[0];paragraph.innerHTML="Get Web Hosting for $0.99/month + SSL Certificate for FREE!",paragraph.setAttribute("style",'font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 15px;');var list=notification.getElementsByTagName("UL")[0];list.remove();var org_html=mainContent.innerHTML,new_html='<div class="content-wrapper">'+mainContent.innerHTML+'</div><div class="web-hosting-90-off-image-wrapper"><img class="web-hosting-90-off-image" src="https://cdn.000webhost.com/000webhost/promotions/bf-2020-wp-inject-img.png"></div>';mainContent.innerHTML=new_html;var saleImage=mainContent.getElementsByClassName("web-hosting-90-off-image")[0]}</script></body>
+
 </html>
